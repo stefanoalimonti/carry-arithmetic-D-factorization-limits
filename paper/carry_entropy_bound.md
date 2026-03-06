@@ -40,7 +40,7 @@ $$c_{k+1} = \left\lfloor \frac{conv_k + c_k}{2} \right\rfloor, \qquad b_k(N) = (
 
 where $conv_k = \sum_{i+j=k} b_i(p_k) \cdot b_j(q_k)$.
 
-**Definition 2** (Carry-zero envelope). $S_0(k) = |\{(p_k, q_k) : c_{k+1} = 0\}|$.
+**Definition 2** (Carry-zero envelope). $S_0(k) = |\lbrace{}(p_k, q_k) : c_{k+1} = 0\rbrace{}|$.
 
 ### 2.1 Local vs Global Carry
 
@@ -60,8 +60,8 @@ is the carry-free convolution sum. Since BFS enforces $(p_k \cdot q_k) \bmod 2^{
 
 **Theorem 1** (Decomposition). $S_0(k) = \tau_{\text{odd}}(M_k) + \Phi(k)$, where:
 
-- $\tau_{\text{odd}}(M_k) = |\{(d,\, M_k/d) : d \mid M_k,\; d \text{ and } M_k/d \text{ both odd}\}|$
-- $\Phi(k) = |\{(p_k, q_k) : c_{k+1} = 0,\; p_k \cdot q_k \neq M_k\}|$ (phantoms)
+- $\tau_{\text{odd}}(M_k) = |\lbrace{}(d,\, M_k/d) : d \mid M_k,\; d \text{ and } M_k/d \text{ both odd}\rbrace{}|$
+- $\Phi(k) = |\lbrace{}(p_k, q_k) : c_{k+1} = 0,\; p_k \cdot q_k \neq M_k\rbrace{}|$ (phantoms)
 
 *Proof.* If $c_{k+1} = 0$ at all columns $0, \ldots, k$, then $p_k \cdot q_k \equiv M_k \pmod{2^{k+1}}$. Among these, exactly those with $p_k \cdot q_k = M_k$ (as integers) correspond to odd-divisor pairs. The remainder have $p_k \cdot q_k = M_k + j \cdot 2^{k+1}$ for some $j \geq 1$. $\square$
 
@@ -83,13 +83,13 @@ In particular, $\alpha_\tau := \log_2(\max_k \tau_{\text{odd}}(M_k)) / D \to 0$ 
 
 **Proposition 3** (Upper bound). For $M_k$ odd, define
 
-$$\mathcal{M}(k) := \lvert \{(p,q) : p,q \text{ odd},\; 1 \leq p,q \leq 2^{k+1}-1,\; p \cdot q \equiv M_k \pmod{2^{k+1}} \} \rvert.$$
+$$\mathcal{M}(k) := \lvert \lbrace{}(p,q) : p,q \text{ odd},\; 1 \leq p,q \leq 2^{k+1}-1,\; p \cdot q \equiv M_k \pmod{2^{k+1}} \rbrace{} \rvert.$$
 
 Then $\mathcal{M}(k) = 2^k$ exactly. Since $S_0(k) \leq \mathcal{M}(k)$:
 
 $$\alpha_{S_0} := \frac{\log_2 S_0(k)}{k} \leq 1$$
 
-*Proof.* Since $M_k$ is odd (as $N$ is a product of odd primes), $M_k \in (\mathbb{Z}/2^{k+1}\mathbb{Z})^{\times}$. For each odd $p \in \{1, 3, 5, \ldots, 2^{k+1}-1\}$ (there are $2^k$ such values), the equation $p \cdot q \equiv M_k \pmod{2^{k+1}}$ has exactly one solution $q \equiv p^{-1} M_k \pmod{2^{k+1}}$, and $q$ is odd because $p^{-1} M_k$ is odd (product of odd units). Every carry-zero pair $(p_k, q_k)$ satisfies $p_k \cdot q_k \equiv M_k \pmod{2^{k+1}}$ (Theorem 1 proof), so $S_0(k) \leq \mathcal{M}(k) = 2^k$. $\square$
+*Proof.* Since $M_k$ is odd (as $N$ is a product of odd primes), $M_k \in (\mathbb{Z}/2^{k+1}\mathbb{Z})^{\times}$. For each odd $p \in \lbrace{}1, 3, 5, \ldots, 2^{k+1}-1\rbrace{}$ (there are $2^k$ such values), the equation $p \cdot q \equiv M_k \pmod{2^{k+1}}$ has exactly one solution $q \equiv p^{-1} M_k \pmod{2^{k+1}}$, and $q$ is odd because $p^{-1} M_k$ is odd (product of odd units). Every carry-zero pair $(p_k, q_k)$ satisfies $p_k \cdot q_k \equiv M_k \pmod{2^{k+1}}$ (Theorem 1 proof), so $S_0(k) \leq \mathcal{M}(k) = 2^k$. $\square$
 
 **Corollary 3.1.** $\Phi(k) \leq 2^k - \tau_{\text{odd}}(M_k)$. Combined with Theorem 2: $\Phi(k) \leq 2^k - 1$, so $\alpha_\Phi \leq 1$.
 
