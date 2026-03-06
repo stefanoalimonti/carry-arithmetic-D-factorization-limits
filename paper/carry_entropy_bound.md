@@ -212,14 +212,14 @@ Requirements: Python 3.8+, NumPy. C compiler (gcc/clang) for `D01_bfs_entropy.c`
 1. P. Diaconis, J. Fulman, "Carries, Shuffling, and Symmetric Functions," *Adv. Appl. Math.* 43(2), 176--196, 2009.
 2. S. Wigert, "Sur l'ordre de grandeur du nombre des diviseurs d'un entier," *Arkiv for Matematik* 3(18), 1--9, 1907.
 3. S. Ramanujan, "Highly Composite Numbers," *Proc. London Math. Soc.* 2(1), 347--409, 1915.
-4. [A] Companion paper: "Spectral Theory of Carries in Positional Multiplication," this series.
-5. [B] Companion paper: "Carry Polynomials and the Euler Product: An Approximation Framework," this series.
-6. [P1] Companion paper: "π from Pure Arithmetic: A Spectral Phase Transition in the Binary Carry Bridge," this series.
-7. [P2] Companion paper: "The Sector Ratio in Binary Multiplication: From Markov Failure to Transcendence," this series.
-8. [C] Companion paper: "Eigenvalue Statistics of Carry Companion Matrices: A Markov-Driven GOE↔GUE Transition in Sparse Non-Hermitian Ensembles," this series.
-9. [E] Companion paper: "The Trace Anomaly of Binary Multiplication," this series.
-10. [G] Companion paper: "The Angular Uniqueness of Base 2 in Positional Multiplication," this series.
-11. [H] Companion paper: "Carry Polynomials and the Partial Euler Product: A Control Experiment," this series.
+4. [A] Companion paper: "Spectral Theory of Carries in Positional Multiplication," this series. doi:10.5281/zenodo.18895593
+5. [B] Companion paper: "Carry Polynomials and the Euler Product: An Approximation Framework," this series. doi:10.5281/zenodo.18895597
+6. [P1] Companion paper: "π from Pure Arithmetic: A Spectral Phase Transition in the Binary Carry Bridge," this series. doi:10.5281/zenodo.18895611
+7. [P2] Companion paper: "The Sector Ratio in Binary Multiplication: From Markov Failure to Transcendence," this series. doi:10.5281/zenodo.18895615
+8. [C] Companion paper: "Eigenvalue Statistics of Carry Companion Matrices: A Markov-Driven GOE↔GUE Transition in Sparse Non-Hermitian Ensembles," this series. doi:10.5281/zenodo.18895595
+9. [E] Companion paper: "The Trace Anomaly of Binary Multiplication," this series. doi:10.5281/zenodo.18895604
+10. [G] Companion paper: "The Angular Uniqueness of Base 2 in Positional Multiplication," this series. doi:10.5281/zenodo.18895601
+11. [H] Companion paper: "Carry Polynomials and the Partial Euler Product: A Control Experiment," this series. doi:10.5281/zenodo.18895603
 
 ---
 
